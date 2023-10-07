@@ -342,14 +342,14 @@ class Topomap_construction():
         self.current_node_id = tmp_current_node_idx_store
         self.v_num = self.g.vcount()
         #layout = self.g.layout('kk')
-        """plt.ion()
+        plt.ion()
         fig, ax = plt.subplots()
         ig.plot(self.g, target=ax,
                 vertex_label=['{}, {}, {}'.format(i, room_status, self.g.vs[i]['room_entry']) for i, room_status in enumerate(self.g.vs['room_status'])]
                 ,edge_label=['{}, {}'.format(way_point,i) for i, way_point in enumerate(self.g.es['way_point'])])
         plt.show()
         plt.pause(2)
-        plt.ioff()"""
+        plt.ioff()
     #plt.close()
         entry_dist = 100000
         if len(self.g.vs[self.current_node_id]['room_entry']) != 0:
