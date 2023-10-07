@@ -12,6 +12,13 @@ After installing habitat, clone the repository and install other requirements:
 git clone https://github.com/B0GGY/Active_room_segmentation.git
 cd Active_room_segmentation
 pip install -r requirements.txt
+```
+## Dateset
+To download the Gibson scene dataset and task datasets(Point goal navigation), please refer to [this site](https://github.com/facebookresearch/habitat-lab/blob/main/DATASETS.md). 
 
+# Usage
+For running the active room segmentation method:
+```
+python explorable_with_door_detection.py --split val --eval 1 -n 1 -v 1 --train_global 0 --train_local 0 --train_slam 0 
 ```
 
