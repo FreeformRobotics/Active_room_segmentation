@@ -9,8 +9,9 @@ The habitat-sim and habitat-api used in this method are the  same as [ANS](https
 ## Setup
 After installing habitat, clone the repository and install other requirements:
 ```
-function test() {
-  console.log("notice the blank line before this function?");
-}
+git clone https://github.com/B0GGY/Active_room_segmentation.git
+cd Active_room_segmentation
+pip install -r requirements.txt
+
 ```
 
