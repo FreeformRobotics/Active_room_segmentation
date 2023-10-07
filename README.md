@@ -1,2 +1,2 @@
-# Active_room_segmentation
+# Active room segmentation
 README is in preparation.
