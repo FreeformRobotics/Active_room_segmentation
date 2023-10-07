@@ -8,3 +8,4 @@ This is the Code for the paper 'Human Cognition-Inspired Active Room Segmentatio
 The habitat-sim and habitat-api used in this method are the  same as [ANS](https://github.com/devendrachaplot/Neural-SLAM). Please refer to [ANS](https://github.com/devendrachaplot/Neural-SLAM) for installing the specific version of habitat-sim and habitat-api.
 ## Setup
 After installing habitat, clone the repository and install other requirements:
+''' test'''
