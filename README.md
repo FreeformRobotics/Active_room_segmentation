@@ -13,6 +13,14 @@ git clone https://github.com/B0GGY/Active_room_segmentation.git
 cd Active_room_segmentation
 pip install -r requirements.txt
 ```
+## Door detection network
+In this method, we borrow the door detection network from [aislabunimi](https://github.com/aislabunimi/door-detection-long-term). The train params of the network can be downloaded from [here]([https://unimi2013-my.sharepoint.com/personal/michele_antonazzi_unimi_it/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fmichele%5Fantonazzi%5Funimi%5Fit%2FDocuments%2Ftrain%5Fparams&ga=1](https://unimi2013-my.sharepoint.com/personal/michele_antonazzi_unimi_it/_layouts/15/onedrive.aspx?ga=1&id=%2Fpersonal%2Fmichele%5Fantonazzi%5Funimi%5Fit%2FDocuments%2Ftrain%5Fparams%2Fdetr%5Fresnet50%5F4)). After downloading and unzipping it:
+```
+cd detr_door_detection
+mkdir -p train_params/detr_resnet_50_4
+mv 'location of the downloaded final_doors_dataset' train_params/detr_resnet_50_4
+```
+
 ## Dateset
 To download the Gibson scene dataset and task datasets(Point goal navigation), please refer to [this site](https://github.com/facebookresearch/habitat-lab/blob/main/DATASETS.md). 
 
