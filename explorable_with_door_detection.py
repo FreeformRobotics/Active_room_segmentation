@@ -306,29 +306,9 @@ def main():
 
                     take_name_flag = False
                 if done:  # means this round should be over  action_count == args.max_episode_length - 1
-                    save_path = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result', scene_name,
-                                             '{}_{}.npy'.format(scene_name, scene_idx))  # scene_idx
-                    save_path_time = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result', scene_name,
-                                             '{}_{}_time.npy'.format(scene_name, scene_idx))  # scene_idx
-                    save_path_area = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                                  scene_name,
-                                                  '{}_{}_area.npy'.format(scene_name, scene_idx))  # scene_idx
-                    file_path = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                             scene_name)
-                    #try:
-                    #    os.makedirs(file_path)
-                    #except:
-                    #    pass
-                    print('scene name {}'.format(save_path))
-                    take_name_flag = True
-                    #plt.clf()
-                    #plt.plot(cov_ratio_list)
-                    #plt.show()
-                    #np.save(save_path_time, step_list)
-                    #np.save(save_path, cov_ratio_list)
-                    #np.save(save_path_area, cov_area_list)
-                    #np.save('zancun/step_list_cantwell_test_f.npy', step_list)
-                    #np.save('zancun/cov_list_cantwell_test_f.npy', cov_ratio_list)
+                    
+                    
+                    
                     plt.ion()
                     plt.clf()
                     plt.plot(cov_ratio_list)
@@ -336,9 +316,7 @@ def main():
                     plt.pause(2)
                     plt.ioff()
                     plt.close()
-                    #stage1_door_map = np.zeros_like(stage1_door_map)
-                    #stage2_door_map = np.zeros_like(stage1_door_map)
-                    #stage3_door_map = np.zeros_like(stage1_door_map)
+                    
                     action_count = 0
                     cov_ratio = 0
                     cov_area = 0
@@ -553,31 +531,7 @@ def main():
                     cov_area_list.append(exp_area)
                     if done:  # means this round should be over  action_count == args.max_episode_length - 1
 
-                        save_path = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                                 scene_name,
-                                                 '{}_{}.npy'.format(scene_name, scene_idx))  # scene_idx
-                        save_path_time = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                                 scene_name,
-                                                 '{}_{}_time.npy'.format(scene_name, scene_idx))  # scene_idx
-                        save_path_area = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                                 scene_name,
-                                                 '{}_{}_area.npy'.format(scene_name, scene_idx))  # scene_idx
-                        file_path = os.path.join('/home/airs/Downloads/ANS/Neural-SLAM/613my_method_test_result',
-                                                 scene_name)
-                        #try:
-                        #    os.makedirs(file_path)
-                        #except:
-                        #    pass
-                        print('scene name {}'.format(save_path))
-                        take_name_flag = True
-                        #plt.clf()
-                        #plt.plot(cov_ratio_list)
-                        #plt.show()
-                        #np.save(save_path, cov_ratio_list)
-                        #np.save(save_path_area, cov_area_list)
-                        #np.save(save_path_time, step_list)
-                        #np.save('zancun/step_list_cantwell_test_f.npy', step_list)
-                        #np.save('zancun/cov_list_cantwell_test_f.npy', cov_ratio_list)
+                        
                         plt.ion()
                         plt.clf()
                         plt.plot(cov_ratio_list)
@@ -585,9 +539,7 @@ def main():
                         plt.pause(2)
                         plt.ioff()
                         plt.close()
-                        #stage1_door_map = np.zeros_like(stage1_door_map)
-                        #stage2_door_map = np.zeros_like(stage1_door_map)
-                        #stage3_door_map = np.zeros_like(stage1_door_map)
+                        
                         action_count = 0
                         cov_ratio = 0
                         cov_area = 0
@@ -690,23 +642,7 @@ def main():
                 plt.subplot(1,2,2)
                 plt.imshow(gt_door_local_map)
                 plt.show()"""
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/topo_mapping_result/Hambleton/{}/gt_map_Hambleton.npy'.format(scene_idx), gt_map)#scene_idx
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/topo_mapping_result/Hambleton/{}/gt_exp_Hambleton.npy'.format(scene_idx), gt_exp)#scene_idx
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/map_save_for_dude/Hambleton/{}/gt_map_{}.npy'.format(scene_idx,
-                #    action_count), gt_map)
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/map_save_for_dude/Hambleton/{}/gt_exp_{}.npy'.format(scene_idx,
-                #    action_count), gt_exp)
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/paper_fig/gt_map.npy', gt_map)
-                #np.save('/home/airs/Downloads/ANS/Neural-SLAM/paper_fig/gt_exp.npy', gt_exp)
-                """np.save('/home/airs/Downloads/ANS/Neural-SLAM/map_for_time_test/Hambleton/{}/gt_map_{}.npy'.format(
-                    scene_idx,
-                    action_count), gt_map)
-                np.save('/home/airs/Downloads/ANS/Neural-SLAM/map_for_time_test/Hambleton/{}/gt_exp_{}.npy'.format(
-                    scene_idx,
-                    action_count), gt_exp)"""
-                #np.save('route_save/{}.npy'.format(action_count), route_map)
-                #np.save('paper_fig/route_map.npy'.format(action_count), route_map)
-                # print(planner_pose_inputs)
+                
                 c, r = absolute_locs[:-1]
                 global_loc_xy_pix = [round(r * 100.0 / args.map_resolution),
                                      round(c * 100.0 / args.map_resolution)]
@@ -931,19 +867,12 @@ def main():
                 if not return_flag:
                     log_num += 1
                     plt.clf()
-                    #fig_save_path = '/home/airs/Downloads/ANS/Neural-SLAM/F_method_log/{}/{}'.format(scene_name,scene_idx)
-                    fig_save_path = '/home/airs/Downloads/ANS/Neural-SLAM/613f_method_log/{}/{}'.format(scene_name,
-                                                                                                     scene_idx)
-                    try:
-                        #pass
-                        os.makedirs(fig_save_path)
-                    except:
-                        pass
+                    
                     plt.imshow(show_map)
                     plt.plot(absolute_locs[1]*100/5, absolute_locs[0]*100/5, 'o', color = 'red')
                     for f in f_list:
                         plt.plot(f[1], f[0], 'o', color = 'peru')
-                    #plt.savefig(fig_save_path+'/{}.png'.format(log_num))
+                    
 
 
 
@@ -1217,11 +1146,7 @@ def main():
 
 
 
-        #np.save('/home/airs/Downloads/ANS/Neural-SLAM/result_save/{}_result/my_step_list_detect.npy'.format(scene_name), step_list)
-        #np.save('/home/airs/Downloads/ANS/Neural-SLAM/result_save/{}_result/my_cov_list_detect.npy'.format(scene_name), cov_ratio_list)
-
-        # np.save('/home/airs/Downloads/ANS/Neural-SLAM/result_save/{}_result/my_step_list_current_real_door.npy'.format(scene_name), step_list)
-        # np.save('/home/airs/Downloads/ANS/Neural-SLAM/result_save/{}_result/my_cov_list_current_real_door.npy'.format(scene_name), cov_ratio_list)
+        
         # plt.close()
 
         """if action_count != 0:
@@ -1257,413 +1182,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# save the origin take_action
-"""        def take_action(action, locs):
-        if action != 4:
-            obs, rew, done, infos = envs.step(torch.tensor([action]))#
-            #print(infos[0]['sensor_pose'])
-            #print(locs)
-            #locs = locs + infos[0]['sensor_pose']
-            locs = pu.get_new_pose(locs, infos[0]['sensor_pose'])
-            absolute_locs = locs + origins[0]
-
-            r, c = absolute_locs[1], absolute_locs[0]
-            loc_r, loc_c = [int(r * 100.0 / args.map_resolution),
-                            int(c * 100.0 / args.map_resolution)]
-
-            lmb[0] = get_local_map_boundaries((loc_r, loc_c),
-                                              (local_w, local_h),
-                                              (full_w, full_h))
-            planner_pose_inputs[0, 3:] = lmb[0]
-            origins[0] = [lmb[0][2] * args.map_resolution / 100.0,
-                          lmb[0][0] * args.map_resolution / 100.0, 0.]
-            locs = absolute_locs - origins[0]
-            print('origin {}'.format(origins[0]))
-            print('absolute_locs {}'.format(absolute_locs))
-            print('locs {}'.format(locs))
-            #goal_list = generate_12_parts(locs)
-            #print(goal_list)
-            angle = np.deg2rad(locs[2])
-            dx = np.sin(angle)
-            dy = np.cos(angle)
-            obs_show = obs[0][0].cpu().detach().numpy()
-            #obs_show = obs_show.transpose(2,1,0)
-            gt_map = infos[0]['gt_map']#['gt_map']
-            #gt_map = gt_map[::-1, ::-1]
-            #gt_map = gt_map[::-1,:]  # flip vertically
-            #gt_map = gt_map[:, ::-1]  # flip horizontally
-            gt_map = gt_map.transpose()
-            plt.clf()
-            plt.subplot(1,2,1)
-            plt.imshow(gt_map)
-            plt.arrow(absolute_locs[1]*100/5, absolute_locs[0]*100/5,dx * 8, dy * (8 * 1.25),head_width=8, head_length=8 * 1.25,
-                    length_includes_head=True, fc='Red', ec='Red', alpha=0.9)#absolute_locs[1]*100/5, absolute_locs[0]*100/5
-            #plt.plot(origins[0][0]*100/5,origins[0][1]*100/5,'o',color='red')
-            plt.plot(lmb[0][0], lmb[0][2], 'o', color='red')
-            plt.plot(lmb[0][1], lmb[0][2], 'o', color='red')
-            plt.plot(lmb[0][0], lmb[0][3], 'o', color='red')
-            plt.plot(lmb[0][1], lmb[0][3], 'o', color='red')
-            #for goal in goal_list:
-            #    plt.plot(goal[0]+origins[0][1]*100/5,goal[1]+origins[0][0]*100/5,'o',color='yellow')
-            plt.subplot(1,2,2)
-            plt.imshow(obs_show, cmap='gray')
-            plt.show()
-        else:
-            action = 1  # 12 turn_right makes up on scan motion
-            for _ in range(12):
-                obs, rew, done, infos = envs.step(torch.tensor([action]))  #
-                # print(infos[0]['sensor_pose'])
-                # print(locs)
-                locs = pu.get_new_pose(locs, infos[0]['sensor_pose'])
-
-                absolute_locs = locs + origins[0]
-                r, c = absolute_locs[1], absolute_locs[0]
-                loc_r, loc_c = [int(r * 100.0 / args.map_resolution),
-                                int(c * 100.0 / args.map_resolution)]
-
-                lmb[0] = get_local_map_boundaries((loc_r, loc_c),
-                                                  (local_w, local_h),
-                                                  (full_w, full_h))
-                [gx1, gx2, gy1, gy2] = lmb[0]
-                planner_pose_inputs[0, 3:] = lmb[0]
-                planner_pose_inputs[0, :3] = absolute_locs
-                origins[0] = [lmb[0][2] * args.map_resolution / 100.0,
-                              lmb[0][0] * args.map_resolution / 100.0, 0.]
-                locs = absolute_locs - origins[0]
-                #print('origin {}'.format(origins[0]))
-                #print('absolute_locs {}'.format(absolute_locs))
-                #print('locs {}'.format(locs))
-
-                # print(locs)
-                angle = np.deg2rad(locs[2])
-                dx = np.sin(angle)
-                dy = np.cos(angle)
-                obs_show = obs[0][0].cpu().detach().numpy()
-            print('origin {}'.format(origins[0]))
-            print('absolute_locs {}'.format(absolute_locs))
-            print('locs {}'.format(locs))
-            gt_map = infos[0]['pano_map']  # ['gt_map']
-            gt_exp = infos[0]['pano_exp']
-            #gt_map = gt_map.transpose()
-            #gt_exp = gt_exp.transpose()
-
-            #gt_map_local_grid = np.rint(gt_map[gy1:gy2, gx1:gx2])
-            #gt_exp_local_grid = np.rint(gt_exp[gy1:gy2, gx1:gx2])
-            gt_map_local_grid = np.rint(gt_map[gx1:gx2, gy1:gy2])
-            gt_exp_local_grid = np.rint(gt_exp[gx1:gx2, gy1:gy2])
-
-            #plt.imshow(gt_map_local_grid.transpose())
-            #plt.plot(locs[1]*100/5, locs[0]*100/5, 'o', color = 'green')
-            #plt.show()
-            #exit()
-            gt_map = gt_map.transpose()
-            gt_exp = gt_exp.transpose()
-            print(planner_pose_inputs)
-            c, r = absolute_locs[:-1]
-            start = [int(r * 100.0 / args.map_resolution - gx1),
-                     int(c * 100.0 / args.map_resolution - gy1)]
-            goal_list = generate_12_parts(locs)
-            planner_pose_inputs_copy = planner_pose_inputs.copy()
-            unexplorable_list = []
-            list_x = []
-            list_y = []
-            for goal in goal_list:
-                #goal = [int(302-origins[0][1]*100/5), int(237-origins[0][0]*100/5)]  # [x, y]
-                #goal = [182, 117]
-                print(goal)
-
-                planner_inputs = [{} for e in range(num_scenes)]
-                for e, p_input in enumerate(planner_inputs):
-                    p_input['goal'] = goal
-                    p_input['map_pred'] = gt_map_local_grid
-                    p_input['exp_pred'] = gt_exp_local_grid
-                    p_input['pose_pred'] = planner_pose_inputs[0]
-                    p_input['mid_out'] = True
-                loc_y = (planner_pose_inputs[0][0] - origins[0][0]) * 100 / 5
-                loc_x = (planner_pose_inputs[0][1] - origins[0][1]) * 100 / 5
-                total_dist = 0
-
-                #list_x = []
-                #list_y = []
-                for _ in range(150):
-                    output = envs.get_short_term_goal(planner_inputs)
-                    #print(output)
-                    dist = output[0][0].cpu().detach().numpy()
-                    total_dist += dist
-                    stg = output[0][1:].cpu().detach().numpy()
-                    stg_x, stg_y = stg
-                    #global_stg = np.array([stg_y, stg_x]) + np.array([origins[0][0] * 100 / 5, origins[0][1] * 100 / 5])
-                    list_x.append(stg_x + origins[0][1] * 100 / 5)
-                    list_y.append(stg_y + origins[0][0] * 100 / 5)
-                    #print(total_dist)
-                    if total_dist > explorable_threshold:
-                        unexplorable_list.append(goal)
-                        break
-
-                    planner_pose_inputs[0,:2] = stg_y*5/100 + origins[0][0], stg_x*5/100 + origins[0][1]
-                    for e, p_input in enumerate(planner_inputs):
-                        p_input['goal'] = goal
-                        p_input['map_pred'] = gt_map_local_grid
-                        p_input['exp_pred'] = gt_exp_local_grid
-                        p_input['pose_pred'] = planner_pose_inputs[0]
-                        p_input['mid_out'] = True
-                print(total_dist)
-                if total_dist == 0.0:
-                    print('goal in obstacle')
-                    unexplorable_list.append(goal)
-                planner_pose_inputs[0,:2] = planner_pose_inputs_copy[0,:2]
-
-            #global_stg = np.array([stg_y, stg_x]) + np.array([origins[0][0]*100/5, origins[0][1]*100/5])
-            #print(global_stg)
-            #print(dist)
-            #start = pu.threshold_poses(start, gt_map_local_grid.shape)
-            #stg = envs._get_stg(gt_map_local_grid, gt_exp_local_grid, start, goal, [gx1, gx2, gy1, gy2])
-
-            #gt_map = gt_map[::-1, :]  # filp vertically
-            #gt_map = gt_map[::-1, ::-1]
-            #exit()
-            print(len(goal_list)-len(unexplorable_list))
-            print(unexplorable_list)
-            plt.clf()
-            plt.subplot(1, 2, 1)
-            plt.imshow(gt_map)
-            plt.plot(lmb[0][0], lmb[0][2], 'o', color='green')
-            plt.plot(lmb[0][1], lmb[0][2], 'o', color='green')
-            plt.plot(lmb[0][0], lmb[0][3], 'o', color='green')
-            plt.plot(lmb[0][1], lmb[0][3], 'o', color='green')
-            plt.arrow(absolute_locs[1]*100/5, absolute_locs[0]*100/5,dx * 8, dy * (8 * 1.25),head_width=8, head_length=8 * 1.25,
-                    length_includes_head=True, fc='Red', ec='Red', alpha=0.9)#absolute_locs[1]*100/5, absolute_locs[0]*100/5
-            #plt.plot(global_stg[1], global_stg[0], 'o', color='blue')
-            plt.plot(list_x, list_y, 'o', color='blue')
-            for goal in goal_list:
-                if goal not in unexplorable_list:
-                    plt.plot(goal[0]+origins[0][1]*100/5, goal[1]+origins[0][0]*100/5, 'o', color='red')
-            plt.subplot(1, 2, 2)
-            plt.imshow(obs_show, cmap='gray')
-            plt.show()
-        return locs#, origins"""
-
-# below version will crop the local map every time(but this might lead to wrong result)
-"""    def take_action(action, locs):
-        if action != 4:
-            obs, rew, done, infos = envs.step(torch.tensor([action]))#
-            #print(infos[0]['sensor_pose'])
-            #print(locs)
-            #locs = locs + infos[0]['sensor_pose']
-            locs = pu.get_new_pose(locs, infos[0]['sensor_pose'])
-            absolute_locs = locs + origins[0]
-
-            r, c = absolute_locs[1], absolute_locs[0]
-            loc_r, loc_c = [int(r * 100.0 / args.map_resolution),
-                            int(c * 100.0 / args.map_resolution)]
-
-            lmb[0] = get_local_map_boundaries((loc_r, loc_c),
-                                              (local_w, local_h),
-                                              (full_w, full_h))
-            planner_pose_inputs[0, 3:] = lmb[0]
-            origins[0] = [lmb[0][2] * args.map_resolution / 100.0,
-                          lmb[0][0] * args.map_resolution / 100.0, 0.]
-            locs = absolute_locs - origins[0]
-            print('origin {}'.format(origins[0]))
-            print('absolute_locs {}'.format(absolute_locs))
-            print('locs {}'.format(locs))
-            #goal_list = generate_12_parts(locs)
-            #print(goal_list)
-            angle = np.deg2rad(locs[2])
-            dx = np.sin(angle)
-            dy = np.cos(angle)
-            obs_show = obs[0][0].cpu().detach().numpy()
-            #obs_show = obs_show.transpose(2,1,0)
-            gt_map = infos[0]['gt_map']#['gt_map']
-            #gt_map = gt_map[::-1, ::-1]
-            #gt_map = gt_map[::-1,:]  # flip vertically
-            #gt_map = gt_map[:, ::-1]  # flip horizontally
-            gt_map = gt_map.transpose()
-            plt.clf()
-            plt.subplot(1,2,1)
-            plt.imshow(gt_map)
-            plt.arrow(absolute_locs[1]*100/5, absolute_locs[0]*100/5,dx * 8, dy * (8 * 1.25),head_width=8, head_length=8 * 1.25,
-                    length_includes_head=True, fc='Red', ec='Red', alpha=0.9)#absolute_locs[1]*100/5, absolute_locs[0]*100/5
-            #plt.plot(origins[0][0]*100/5,origins[0][1]*100/5,'o',color='red')
-            plt.plot(lmb[0][0], lmb[0][2], 'o', color='red')
-            plt.plot(lmb[0][1], lmb[0][2], 'o', color='red')
-            plt.plot(lmb[0][0], lmb[0][3], 'o', color='red')
-            plt.plot(lmb[0][1], lmb[0][3], 'o', color='red')
-            #for goal in goal_list:
-            #    plt.plot(goal[0]+origins[0][1]*100/5,goal[1]+origins[0][0]*100/5,'o',color='yellow')
-            plt.subplot(1,2,2)
-            plt.imshow(obs_show, cmap='gray')
-            plt.show()
-        else:
-            action = 1  # 12 turn_right makes up on scan motion
-            for _ in range(12):
-                obs, rew, done, infos = envs.step(torch.tensor([action]))  #
-                # print(infos[0]['sensor_pose'])
-                # print(locs)
-                locs = pu.get_new_pose(locs, infos[0]['sensor_pose'])
-
-                absolute_locs = locs + origins[0]
-                r, c = absolute_locs[1], absolute_locs[0]
-                loc_r, loc_c = [int(r * 100.0 / args.map_resolution),
-                                int(c * 100.0 / args.map_resolution)]
-
-                lmb[0] = get_local_map_boundaries((loc_r, loc_c),
-                                                  (local_w, local_h),
-                                                  (full_w, full_h))
-                [gx1, gx2, gy1, gy2] = lmb[0]
-                planner_pose_inputs[0, 3:] = lmb[0]
-                planner_pose_inputs[0, :3] = absolute_locs
-                origins[0] = [lmb[0][2] * args.map_resolution / 100.0,
-                              lmb[0][0] * args.map_resolution / 100.0, 0.]
-                locs = absolute_locs - origins[0]
-                #print('origin {}'.format(origins[0]))
-                #print('absolute_locs {}'.format(absolute_locs))
-                #print('locs {}'.format(locs))
-
-                # print(locs)
-                angle = np.deg2rad(locs[2])
-                dx = np.sin(angle)
-                dy = np.cos(angle)
-                obs_show = obs[0][0].cpu().detach().numpy()
-            print('origin {}'.format(origins[0]))
-            print('absolute_locs {}'.format(absolute_locs))
-            print('locs {}'.format(locs))
-            gt_map = infos[0]['pano_map']  # ['gt_map']
-            gt_exp = infos[0]['pano_exp']
-            #gt_map = gt_map.transpose()
-            #gt_exp = gt_exp.transpose()
-
-            #gt_map_local_grid = np.rint(gt_map[gy1:gy2, gx1:gx2])
-            #gt_exp_local_grid = np.rint(gt_exp[gy1:gy2, gx1:gx2])
-            gt_map_local_grid = np.rint(gt_map[gx1:gx2, gy1:gy2])
-            gt_exp_local_grid = np.rint(gt_exp[gx1:gx2, gy1:gy2])
-
-            #plt.imshow(gt_map_local_grid.transpose())
-            #plt.plot(locs[1]*100/5, locs[0]*100/5, 'o', color = 'green')
-            #plt.show()
-            #exit()
-
-            #print(planner_pose_inputs)
-            c, r = absolute_locs[:-1]
-            start = [int(r * 100.0 / args.map_resolution - gx1),
-                     int(c * 100.0 / args.map_resolution - gy1)]
-            goal_list = generate_12_parts(locs)
-            #goal_list = [[68, 90], [68, 90]]
-            planner_pose_inputs_copy = planner_pose_inputs.copy()
-            origins_copy = origins.copy()
-            absolute_locs_copy = absolute_locs.copy()
-            lmb_copy = lmb.copy()
-            gt_map_local_grid_copy = np.rint(gt_map[gx1:gx2, gy1:gy2])
-            gt_exp_local_grid_copy = np.rint(gt_exp[gx1:gx2, gy1:gy2])
-
-            unexplorable_list = []
-            list_x = []
-            list_y = []
-            for goal in goal_list:
-                #goal = [int(302-origins[0][1]*100/5), int(237-origins[0][0]*100/5)]  # [x, y]
-                #goal = [182, 117]
-                print('pre_goal{}'.format(goal))
-                goal_copy = goal.copy()
-                planner_inputs = [{} for e in range(num_scenes)]
-                for e, p_input in enumerate(planner_inputs):
-                    p_input['goal'] = goal
-                    p_input['map_pred'] = gt_map_local_grid
-                    p_input['exp_pred'] = gt_exp_local_grid
-                    p_input['pose_pred'] = planner_pose_inputs[0]
-                    p_input['mid_out'] = True
-                loc_y = (planner_pose_inputs[0][0] - origins[0][0]) * 100 / 5
-                loc_x = (planner_pose_inputs[0][1] - origins[0][1]) * 100 / 5
-                total_dist = 0
-
-                #list_x = []
-                #list_y = []
-                for _ in range(150):
-                    output = envs.get_short_term_goal(planner_inputs)
-                    #print(output)
-                    dist = output[0][0].cpu().detach().numpy()
-                    total_dist += dist
-                    stg = output[0][1:].cpu().detach().numpy()
-                    stg_x, stg_y = stg
-
-                    #global_stg = np.array([stg_y, stg_x]) + np.array([origins[0][0] * 100 / 5, origins[0][1] * 100 / 5])
-                    list_x.append(stg_x + origins[0][1] * 100 / 5)
-                    list_y.append(stg_y + origins[0][0] * 100 / 5)
-                    global_goal = [int(goal[0] + origins[0][0]*100/5), int(goal[1] + origins[0][1]*100/5)]
-                    #print(total_dist)
-                    if total_dist > explorable_threshold:
-                        unexplorable_list.append(goal_copy)
-                        break
-
-                    planner_pose_inputs[0,:2] = stg_y*5/100 + origins[0][0], stg_x*5/100 + origins[0][1]
-                    absolute_locs = planner_pose_inputs[0, :3]
-
-                    r, c = absolute_locs[1], absolute_locs[0]
-                    loc_r, loc_c = [int(r * 100.0 / args.map_resolution),
-                                    int(c * 100.0 / args.map_resolution)]
-                    #print('loc_r {}, loc_c {}'.format(loc_r, loc_c))
-                    lmb[0] = get_local_map_boundaries((loc_r, loc_c),
-                                                      (local_w, local_h),
-                                                      (full_w, full_h))
-                    [gx1, gx2, gy1, gy2] = lmb[0]
-                    planner_pose_inputs[0, 3:] = lmb[0]
-                    #planner_pose_inputs[0, :3] = absolute_locs
-
-                    origins[0] = [lmb[0][2] * args.map_resolution / 100.0,
-                                  lmb[0][0] * args.map_resolution / 100.0, 0.]
-                    gt_map_local_grid = np.rint(gt_map[gx1:gx2, gy1:gy2])
-                    gt_exp_local_grid = np.rint(gt_exp[gx1:gx2, gy1:gy2])
-                    #locs = absolute_locs - origins[0]
-                    goal = [int(global_goal[0] - origins[0][0]*100/5), int(global_goal[1] - origins[0][1]*100/5)]
-                    #print('origins{}'.format(origins))
-                    for e, p_input in enumerate(planner_inputs):
-                        p_input['goal'] = goal
-                        p_input['map_pred'] = gt_map_local_grid
-                        p_input['exp_pred'] = gt_exp_local_grid
-                        p_input['pose_pred'] = planner_pose_inputs[0]
-                        p_input['mid_out'] = True
-                print(total_dist)
-                if total_dist == 0.0:
-                    print('goal in obstacle')
-                    unexplorable_list.append(goal_copy)
-                #planner_pose_inputs[0,:] = planner_pose_inputs_copy[0,:]
-                absolute_locs = absolute_locs_copy
-                origins[:,:] = origins_copy[:,:]
-                lmb[0] = lmb_copy[0]
-                planner_pose_inputs[0, :3] = absolute_locs
-                planner_pose_inputs[0, 3:] = lmb[0]
-                [gx1, gx2, gy1, gy2] = lmb[0]
-                gt_map_local_grid = gt_map_local_grid_copy
-                gt_exp_local_grid = gt_exp_local_grid_copy
-
-            #global_stg = np.array([stg_y, stg_x]) + np.array([origins[0][0]*100/5, origins[0][1]*100/5])
-            #print(global_stg)
-            #print(dist)
-            #start = pu.threshold_poses(start, gt_map_local_grid.shape)
-            #stg = envs._get_stg(gt_map_local_grid, gt_exp_local_grid, start, goal, [gx1, gx2, gy1, gy2])
-
-            #gt_map = gt_map[::-1, :]  # filp vertically
-            #gt_map = gt_map[::-1, ::-1]
-            #exit()
-            print(len(goal_list)-len(unexplorable_list))
-            print(unexplorable_list)
-            print(goal_list)
-            gt_map = gt_map.transpose()
-            gt_exp = gt_exp.transpose()
-            plt.clf()
-            plt.subplot(1, 2, 1)
-            plt.imshow(gt_map)
-            plt.plot(lmb[0][0], lmb[0][2], 'o', color='green')
-            plt.plot(lmb[0][1], lmb[0][2], 'o', color='green')
-            plt.plot(lmb[0][0], lmb[0][3], 'o', color='green')
-            plt.plot(lmb[0][1], lmb[0][3], 'o', color='green')
-            plt.arrow(absolute_locs[1]*100/5, absolute_locs[0]*100/5,dx * 8, dy * (8 * 1.25),head_width=8, head_length=8 * 1.25,
-                    length_includes_head=True, fc='Red', ec='Red', alpha=0.9)#absolute_locs[1]*100/5, absolute_locs[0]*100/5
-            #plt.plot(global_stg[1], global_stg[0], 'o', color='blue')
-            plt.plot(list_x, list_y, 'o', color='blue')
-            for goal in goal_list:
-            #    if goal not in unexplorable_list:
-                plt.plot(goal[0]+origins[0][1]*100/5, goal[1]+origins[0][0]*100/5, 'o', color='red')
-            plt.subplot(1, 2, 2)
-            plt.imshow(obs_show, cmap='gray')
-            plt.show()
-        return locs#, origins"""
