@@ -191,10 +191,7 @@ class Topomap_construction():
                     tmp_show_map[j[0], j[1]] = room_label
             except:
                 pass
-        #np.save('/home/airs/Downloads/ANS/Neural-SLAM/topo_mapping_result/Hambleton/{}/topo_room_map_Hambleton.npy'.format(scene_idx), tmp_show_map)#scene_idx
-        """np.save(
-            '/home/airs/Downloads/ANS/Neural-SLAM/8m_add_exp/accuracy/Ours/{}/{}/topo_room_map_{}.npy'.format(scene_name,
-                scene_idx, scene_name), tmp_show_map)"""
+        
 
         """plt.ion()
         plt.imshow(tmp_show_map)
