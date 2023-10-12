@@ -188,7 +188,7 @@ model = DetrDoorDetector(model_name=DETR_RESNET50, n_labels=2, pretrained=True,
 
 def run_detr(img):  # 256, 256, 3
     global title
-    #model.eval()
+    model.eval()
     img_vis = img.copy()
     #print('detr_received shape {}'.format(img.shape))
     #img = cv2.resize()
