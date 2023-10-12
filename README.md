@@ -1,5 +1,5 @@
 # Active room segmentation
-
+![image](https://github.com/FreeformRobotics/Active_room_segmentation/blob/master/demo/git_demo.gif)
 This is the Code for the paper 'Human Cognition-Inspired Active Room Segmentation'. Inspired by the human cognition system, this method incorporates vision input as an additional feature and follows a room-by-room exploration strategy to facilitate both the room exploration and exploration tasks. For full details refer to [the paper]().
 
 # Dependencies
