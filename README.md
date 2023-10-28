@@ -19,7 +19,7 @@ In this method, we borrow the door detection network from [aislabunimi](https://
 ```
 cd detr_door_detection
 mkdir -p train_params/detr_resnet_50_4
-mv 'location of the downloaded final_doors_dataset' train_params/detr_resnet_50_4
+mv 'path to the downloaded final_doors_dataset' train_params/detr_resnet_50_4
 ```
 
 ## Dateset
